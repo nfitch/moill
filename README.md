@@ -1,9 +1,10 @@
-# list-claude
-Lists.
+# moill
 
-http://nfitch.github.io/list/
+A keyboard-driven app for managing and collaborating on lists at the speed of thought.
 
-Don't forget, after committing to master:
+http://nfitch.github.io/moill/
+
+Don't forget, after committing to main:
 ```
-git checkout gh-pages && git merge master && git push && git checkout master
+git checkout gh-pages && git merge main && git push && git checkout main
 ```
