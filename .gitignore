@@ -1,0 +1,8 @@
+# AI agent working styles (symlinked)
+working-styles
+
+# Claude Code configuration
+.claude/
+
+# tmp and other things to ignore
+tmp/
