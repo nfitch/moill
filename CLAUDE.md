@@ -33,6 +33,10 @@ This codebase is maintained by humans (nf and Claude writing together). Code qua
 
 All architecture and design lives in `project/design/`. Read relevant docs before implementing anything.
 
+### Linking — MANDATORY
+
+Every reference to a doc in `project/checklist.md` or `project/00-index.md` must be a working markdown link, not plain text.
+
 ### Phase Closeout — MANDATORY
 
 Before moving on from any phase:
