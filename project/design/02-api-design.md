@@ -1,26 +1,26 @@
-# API Design
+List APIs
+=========
 
-Sourced from `../node-list/api/README.md`. This is the most complete API design
-artifact from prior iterations. Preserved as-is for reference during Phase 8
-(API Redesign).
+These is the short hand examples of the list API.  Read the JSON spec for
+details.
 
----
+# TODO
+1. `etag` / `if-match`.
 
 # Common Fields
-
-* `user`: Everything has a user. Everything is prefixed by a user.
+* `user`: Everything has a user.  Everything is prefixed by a user.
 
 # Users
 
-User ids are globally unique. Choose wisely.
+User ids are globally unique.  Choose wisely.
 
-## (CreateOrUpdateUser) Create / Update a User
+## (CreateOrUpdateUser) Create / Update a User.
 ```
 PUT /20230311/users/{id}
 {
    "id": "[id]",
    "name": "[name]",
-   "email": "[email]"
+   "email": "[email]
 }
 
 200 OK
@@ -28,15 +28,15 @@ PUT /20230311/users/{id}
 
 # Lists
 
-List Ids are unique for a user and are specified by the user. They cannot be
-changed, so choose wisely. Or clone and delete.
+List Ids are unique for a user and are specified by the user.  They cannot be
+changed, so choose wisely.  Or clone and delete.
 
 ## (CreateOrUpdateList) Create or Update List
 ```
 PUT /20230311/lists/{user}/{id}
 {
    "id": "[id]",
-   "data": "[data]"
+   "data": "[data]
 }
 
 200 OK
@@ -84,7 +84,7 @@ GET /20230311/lists/{user}
 ```
 POST /20230311/lists/{user}/{id}/actions/clone
 {
-   "newUser": "[user]",  #optional
+   "newUser": "[user]", #optional
    "newId": "[id]",
 }
 
@@ -92,12 +92,13 @@ POST /20230311/lists/{user}/{id}/actions/clone
 ```
 
 ## (ListACL) Modify List ACLs
-_Note: Need to come back to this. For now, everything is just going to be open._
+_Note: Need to come back to this.  For now, everything is just going to be
+open._
 
 # List Elements
 
-Elements never exist independently of a list. They only exist in one list at a
-time. They are created and managed in the context of an "owning" list. Moving
+Elements never exist independently of a list.  They only exist in one list at a
+time.  They are created and managed in the context of an "owning" list.  Moving
 an element from one list to another changes element ownership.
 
 Element Ids are created by the system.
@@ -117,9 +118,9 @@ x-retry-token: [string]
 POST /20230311/elements/{user}/{list}
 {
    "data": "[data]"
-   "index": "[index]"         #int, optional
-   "after": "[elementId]",    #optional
-   "before": "[elementId]",   #optional
+   "index": "[index]" #int, optional
+   "after": "[elementId]", #optional
+   "before": "[elementId]", #optional
 }
 
 200 OK
@@ -129,7 +130,7 @@ POST /20230311/elements/{user}/{list}
    "id": "[id]",
    "data": "[data]",
    "previous": "[elementId]", #can be null
-   "next": "[elementId]",     #can be null
+   "next": "[elementId]", #can be null
 }
 ```
 
@@ -161,15 +162,15 @@ PUT /20230311/elements/{user}/{list}/{id}
 * At an Index
 * After Element (by id)
 * Before Element (by id)
-* List is optional (cross-list move)
+* List is optional
 ```
 POST /20230311/elements/{user}/{list}/{id}/actions/move
 {
-   "index": "[index]"          #int, optional
-   "after": "[elementId]",     #optional
-   "before": "[elementId]",    #optional
-   "newUser": "[user]",        #optional, must also have newListId
-   "newListId": "[listId]",    #optional, must also have newUser
+   "index": "[index]" #int, optional
+   "after": "[elementId]", #optional
+   "before": "[elementId]", #optional
+   "newUser": "[user]", #optional, must also have new list id
+   "newListId": "[listId]", #optional, must also have new user
 }
 
 200 OK
@@ -184,8 +185,8 @@ DELETE /20230311/elements/{user}/{list}/{id}
 
 # Views
 
-Views contain a list of references to Lists. A List can be included in many
-Views. View Ids are unique per user and aren't changeable. Choose wisely.
+Views contain a list of references to Lists.  A List can be included in many
+Views.  View Ids are unique per user and aren't changeable.  Choose wisely.
 Or clone and delete.
 
 ## (CreateOrUpdateView) Create / Update a View
@@ -193,10 +194,10 @@ Or clone and delete.
 PUT /20230311/views/{user}/{id}
 {
    "id": "[id]"
-   "description": "[description]"  #optional
+   "description": "[description]" #optional
    "lists": [
       {
-         "user": "[user]",          #optional, assumed same as path user if omitted
+         "user": "[user]", #optional, assumed same as path user if omitted
          "listId": "[listId]"
       },
       ...
@@ -207,10 +208,10 @@ PUT /20230311/views/{user}/{id}
 {
    "user": "[user]",
    "id": "[id]",
-   "description": "[description]",
+   "description": "[description]"
    "lists": [
       {
-         "user": "[user]",
+         "user": "[user]", #optional, assumed same as path user if omitted
          "listId": "[listId]"
       },
       ...
@@ -226,10 +227,10 @@ GET /20230311/views/{user}/{id}
 {
    "user": "[user]",
    "id": "[id]",
-   "description": "[description]",
+   "description": "[description]"
    "lists": [
       {
-         "user": "[user]",
+         "user": "[user]", #optional, assumed same as path user if omitted
          "listId": "[listId]"
       },
       ...
@@ -252,9 +253,9 @@ DELETE /20230311/views/{user}/{id}
 ```
 PUT /20230311/views/{user}/{id}/lists/{listId}
 {
-   "index": "[index]",   #int, optional
-   "after": "[listId]",  #optional
-   "before": "[listId]"  #optional
+   "index": "[index]" #int, optional
+   "after": "[listId]", #optional
+   "before": "[listId]" #optional
 }
 
 200 OK
@@ -275,9 +276,9 @@ DELETE /20230311/views/{user}/{id}/lists/{listId}
 ```
 POST /20230311/views/{user}/{id}/lists/{listId}/actions/move
 {
-   "index": "[index]",   #int, optional
-   "after": "[listId]",  #optional
-   "before": "[listId]"  #optional
+   "index": "[index]" #int, optional
+   "after": "[listId]", #optional
+   "before": "[listId]" #optional
 }
 
 200 OK
@@ -287,15 +288,9 @@ POST /20230311/views/{user}/{id}/lists/{listId}/actions/move
 ```
 POST /20230311/views/{user}/{id}/actions/clone
 {
-   "newUser": "[user]",  #optional
+   "newUser": "[user]", #optional
    "newId": "[id]",
 }
 
 200 OK
 ```
-
-# Open TODOs (from original)
-
-1. `etag` / `if-match` for optimistic concurrency
-2. Pagination on GetList
-3. List ACLs (deferred — everything open for now)
