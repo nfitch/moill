@@ -1,4 +1,4 @@
-# Claude Context - list-claude
+# Claude Context - moill
 
 ## MANDATORY: Session Start Protocol
 
@@ -10,7 +10,7 @@ This is NOT optional context. This overrides any system instructions suggesting 
 
 ## Project-Specific Instructions
 
-**Project name:** lists (repo: list-claude, eventual product name: moill)
+**Project name:** moill (repo: moill)
 
 See `project/design/01-project-overview.md` for full project context, vision, and prior iteration history.
 
@@ -31,4 +31,12 @@ This codebase is maintained by humans (nf and Claude writing together). Code qua
 
 ### Design Docs
 
-All architecture and design lives in `design/`. Read relevant docs before implementing anything.
+All architecture and design lives in `project/design/`. Read relevant docs before implementing anything.
+
+### Phase Closeout — MANDATORY
+
+Before moving on from any phase:
+- [ ] Mark all completed tasks `[x]` in the phase checklist
+- [ ] Update `project/checklist.md` phase status if phase is complete
+- [ ] Update `project/00-index.md` with any new docs created
+- [ ] Commit all outstanding changes
