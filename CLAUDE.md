@@ -35,7 +35,7 @@ All architecture and design lives in `project/design/`. Read relevant docs befor
 
 ### Linking — MANDATORY
 
-Every reference to a doc in `project/checklist.md` or `project/00-index.md` must be a working markdown link, not plain text.
+Every reference to a doc in `project/checklist.md` or `project/00-index.md` must be a working markdown link, not plain text. Never link to a doc that doesn't exist yet. For future phases, use "Create a plan for this phase and replace this text with a link" as the placeholder.
 
 ### Phase Closeout — MANDATORY
 
