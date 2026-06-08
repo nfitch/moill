@@ -9,8 +9,8 @@ Gather all thinking from prior iterations into this repo as design documents.
 - [x] Create `design/01-project-overview.md` with project context, vision, prior iterations
 - [x] Create `project/checklist.md` master roadmap
 - [x] Bring in node-list API design as `design/02-api-design.md`
-- [ ] Extract TODOs from `index.html` into `project/checklists/phase-2-extract-todos.md`
-- [ ] Extract TODOs from `node-moill/TODO` into same
+- [x] Extract TODOs from `index.html` — Phase 2
+- [x] Extract TODOs from `node-moill/TODO` — Phase 2
 
 ---
 

@@ -7,7 +7,7 @@ Master roadmap. Kept current as work progresses.
 ## Phase 1: Repo Consolidation
 > Gather all thinking from prior iterations into this repo.
 
-- [ ] See `project/checklists/phase-1-repo-consolidation.md`
+- [x] See `project/checklists/phase-1-repo-consolidation.md`
 - Note: prior repo inventory (what to bring over vs discard) is tracked in the phase-1 checklist and evaluated in Phase 4
 
 ## Phase 2: Extract TODOs / Build Finer-Grained Checklist
