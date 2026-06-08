@@ -8,7 +8,7 @@ Gather all thinking from prior iterations into this repo as design documents.
 
 - [x] Create `design/01-project-overview.md` with project context, vision, prior iterations
 - [x] Create `project/checklist.md` master roadmap
-- [ ] Bring in node-list API design as `design/02-api-history.md`
+- [x] Bring in node-list API design as `design/02-api-design.md`
 - [ ] Extract TODOs from `index.html` into `project/checklists/phase-2-extract-todos.md`
 - [ ] Extract TODOs from `node-moill/TODO` into same
 
@@ -35,7 +35,7 @@ To be evaluated in Phase 4 (Server Prototype — Single User).
 
 | Artifact | Status | Notes |
 |---|---|---|
-| `api/README.md` | Done | Captured in `design/02-api-history.md` |
+| `api/README.md` | Done | Captured in `design/02-api-design.md` |
 | `lib/indexed-linked-list.js` | Deferred to Phase 4 | Newer version of ILL — compare with node-moill version |
 | `test/indexed-linked-list.test.js` | Deferred to Phase 4 | Test suite — compare with node-moill version |
 | `lib/list-server.js` | Discard | Fastify stub, nothing there |
