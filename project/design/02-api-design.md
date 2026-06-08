@@ -1,10 +1,8 @@
 List APIs
 =========
 
-These is the short hand examples of the list API.  Read the JSON spec for
-details.
-
 # TODO
+1. Validate API againt UI (after prototyping).
 1. `etag` / `if-match`.
 
 # Common Fields
@@ -102,8 +100,6 @@ time.  They are created and managed in the context of an "owning" list.  Moving
 an element from one list to another changes element ownership.
 
 Element Ids are created by the system.
-
-List element data should mostly be accessed via Views (deep gets).
 
 ## (CreateElement) Creates a new Element
 * At End (default)
