@@ -20,7 +20,7 @@ PUT /20230311/users/{id}
 {
    "id": "[id]",
    "name": "[name]",
-   "email": "[email]
+   "email": "[email]"
 }
 
 200 OK
@@ -36,7 +36,7 @@ changed, so choose wisely.  Or clone and delete.
 PUT /20230311/lists/{user}/{id}
 {
    "id": "[id]",
-   "data": "[data]
+   "data": "[data]"
 }
 
 200 OK
