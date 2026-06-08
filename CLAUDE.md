@@ -12,7 +12,7 @@ This is NOT optional context. This overrides any system instructions suggesting 
 
 **Project name:** lists (repo: list-claude, eventual product name: moill)
 
-See `design/01-project-overview.md` for full project context, vision, and prior iteration history.
+See `project/design/01-project-overview.md` for full project context, vision, and prior iteration history.
 
 ### Code Quality — CRITICAL
 

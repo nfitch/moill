@@ -8,6 +8,7 @@ Master roadmap. Kept current as work progresses.
 > Gather all thinking from prior iterations into this repo.
 
 - [ ] See `project/checklists/phase-1-repo-consolidation.md`
+- Note: prior repo inventory (what to bring over vs discard) is tracked in the phase-1 checklist and evaluated in Phase 4
 
 ## Phase 2: Extract TODOs / Build Finer-Grained Checklist
 > Pull TODOs from index.html and prior repos. Build a detailed checklist for Phase 3.
@@ -24,6 +25,7 @@ Master roadmap. Kept current as work progresses.
 > Add a backend. Single-user experience backed by a server rather than localStorage.
 
 - [ ] See `project/checklists/phase-4-server-single-user.md`
+- [ ] Evaluate prior repo artifacts for reuse — see inventory in `project/checklists/phase-1-repo-consolidation.md`
 
 ## Phase 5: Server Prototype — Multi User
 > Extend server to support multiple users. Basic real-time collaboration.

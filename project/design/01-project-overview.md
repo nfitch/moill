@@ -9,7 +9,7 @@ Future: **moill** (Map of Indexed Linked Lists)
 
 Most list and note-taking tools require constant context-switching between keyboard and mouse, breaking the user's flow. When managing and reorganizing lists of things, that friction compounds quickly.
 
-list-prime solves this by being entirely keyboard-driven, with shortcuts intuitive enough that the learning curve is shallow — the interface gets out of the way.
+moill solves this by being entirely keyboard-driven, with shortcuts intuitive enough that the learning curve is shallow — the interface gets out of the way.
 
 ## Ultimate Vision
 
@@ -119,7 +119,10 @@ list/
   key-handler.js            Key binding system, help panel generation
   list-styling.css          All styling
   sample-data/              Test JSON files (various format versions)
-design/                     Architecture and design documentation
+project/
+  checklist.md              Master roadmap
+  checklists/               Individual phase checklists
+  design/                   Architecture and design documentation
 ```
 
 ## Data Format (v1 JSON)
